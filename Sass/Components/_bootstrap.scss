@@ -1,0 +1,80 @@
+// X-Small Screen
+
+.container {
+    max-width: 100%;
+    margin: auto;
+    padding: 0 15px;
+    height: 100%;
+  }
+
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+    margin:0 -15px;
+  }
+
+  [class*="col-"]{
+    padding: 0 15px;
+    width: 100%;
+  }
+  
+  @for $i from 1 through 12 {
+      .col-#{$i}{
+        width: calc(100% * #{$i} / 12);
+      }
+    }
+  
+
+    // Small Screen
+
+  @media (min-width: $sm) {
+    .container {
+      max-width: 540px;
+    }
+    @for $i from 1 through 12 {
+      .col-sm-#{$i}{
+        width: calc(100% * #{$i} / 12);
+      }
+    }
+  }
+  
+
+//   Medium Screen
+
+  @media (min-width: $md) {
+    .container {
+      max-width: 720px;
+    }
+    @for $i from 1 through 12 {
+      .col-md-#{$i}{
+        width: calc(100% * #{$i} / 12);
+      }
+    }
+  }
+  
+//   Large Screen
+
+  @media (min-width: $lg) {
+    .container {
+      max-width: 960px;
+    }
+    @for $i from 1 through 12 {
+      .col-lg-#{$i}{
+        width: calc(100% * #{$i} / 12);
+      }
+    }
+  }
+  
+//   Extra Large Screen
+
+  @media (min-width: $xl) {
+    .container {
+      max-width: 1140px;
+    }
+    @for $i from 1 through 12 {
+      .col-lg-#{$i}{
+        width: calc(100% * #{$i} / 12);
+      }
+    }
+  }
+

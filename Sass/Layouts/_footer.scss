@@ -1,0 +1,113 @@
+#footer {
+  background-color: #131515;
+  padding-top: 56px;
+
+  .footer-inner {
+    .footer-nav {
+      padding: 60px 0;
+      border-bottom: 1px solid rgba($white, 0.1);
+
+      @include tablet {
+        padding: 0;
+      }
+
+      @include mobile {
+        text-align: center;
+      }
+
+      .footer-items {
+        @include tablet {
+          &:not(:last-child) {
+            margin-bottom: 40px;
+          }
+        }
+
+        h6 {
+          color: $white;
+          margin-bottom: 32px;
+        }
+      }
+      .footer-menu {
+        @include flex(column, center);
+
+        @include mobile {
+          align-items: center;
+          font-size: 14px;
+          line-height: 18px;
+        }
+
+        > li {
+          &:not(:last-child) {
+            margin-bottom: 12px;
+          }
+
+          a {
+            color: rgba($white, 0.8);
+            transition: ease 0.5s;
+
+            &:hover {
+              color: $orange;
+            }
+          }
+        }
+        .social {
+          @include flex(row, flex-start, center);
+          margin-bottom: 30px;
+
+          li {
+            &:not(:last-child) {
+              margin-right: 32px;
+            }
+            a {
+              color: $white;
+
+              &:hover img{
+                transform: scale(1.3);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer-bottom {
+    @include flex(row, space-between, center);
+    padding: 24px 0;
+    color: rgba($white, 0.8);
+
+    @include tablet {
+      justify-content: center;
+    }
+
+    .copyright {
+      @include flex(row, center, center);
+
+      @include tablet {
+        display: none;
+      }
+
+      i {
+        margin-right: 12px;
+        font-size: 12px;
+      }
+    }
+
+    .footer-bottom-nav {
+      @include flex(row, space-between, center);
+
+      @include tablet {
+        width: 100%;
+      }
+
+      li {
+        &:first-child {
+          margin-right: 48px;
+        }
+
+        a {
+          color: rgba($white, 0.8);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,168 @@
+#orders {
+  padding: 50px 0;
+  background-color: $white-2;
+
+  .profile-block {
+    background-color: $white;
+    padding: 24px 0;
+
+    h3 {
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: normal;
+      margin-bottom: 37px;
+      padding: 0 24px;
+    }
+  }
+
+  .profile-data-list {
+    @include tablet {
+      @include flex(row, flex-start, center);
+      overflow-x: scroll;
+      border: 1px solid $gray-4;
+      padding: 10px 0;
+      border-radius: 10px;
+    }
+  }
+
+  .profile-data {
+    @include flex(row, flex-start, center);
+    padding-left: 24px;
+    color: $primary-dark;
+    transition: ease .5s;
+
+    &:not(:last-child) {
+      margin-bottom: 32px;
+
+      @include tablet {
+        margin: 0;
+      }
+    }
+    @include tablet{
+      padding: 0 24px;
+    }
+
+    &:hover{
+      color: $primary-pink;
+    }
+
+    i {
+      margin-right: 20px;
+    }
+  }
+
+  .active-profil-data {
+    color: $primary-pink;
+    border-left: 3px solid $primary-pink;
+
+    @include tablet {
+      border-left: 0;
+      border-color: $primary-pink!important;
+    }
+  }
+
+  .orders-block {
+    margin-top: 24px;
+
+    h3 {
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: normal;
+      margin-bottom: 24px;
+    }
+  }
+
+  .order-left {
+    align-items: center;
+    justify-content: space-between;
+
+    @include mobile {
+      align-items: flex-start;
+    }
+  }
+
+  .order-item {
+    background-color: $white;
+    padding: 16px 32px;
+    align-items: center;
+    justify-content: space-between;
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+
+      @include mobile {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  .order-info {
+    @include flex(row, center, center);
+
+    @include mobile {
+      flex-direction: column;
+
+      > div:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+
+    p {
+      color: $gray-3;
+      margin-bottom: 8px;
+    }
+    span {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  .order-date span {
+    color: $gray-1;
+  }
+
+  .order-price span {
+    color: $primary-pink;
+  }
+
+  .way-status,
+  .ready-status {
+    font-weight: 600;
+  }
+
+  .success-status {
+    color: $green;
+  }
+
+  .fail-status {
+    color: $red;
+
+    i {
+      width: 16px;
+      height: 16px;
+      font-size: 13px;
+    }
+  }
+
+  .order-btn {
+    width: 100%;
+    padding: 11px 0;
+    text-align: center;
+    background-color: $gray-6;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: ease .5s;
+
+    &:hover{
+      background-color:$gray-4;
+    }
+
+    @include mobile {
+      margin-top: 32px;
+    }
+
+    a {
+      color: $gray-2;
+    }
+  }
+}

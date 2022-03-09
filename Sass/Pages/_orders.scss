@@ -19,9 +19,7 @@
     @include tablet {
       @include flex(row, flex-start, center);
       overflow-x: scroll;
-      border: 1px solid $gray-4;
-      padding: 10px 0;
-      border-radius: 10px;
+      padding:0 24px;
     }
   }
 
@@ -36,18 +34,27 @@
 
       @include tablet {
         margin: 0;
+        margin-right: 10px;
       }
     }
     @include tablet{
-      padding: 0 24px;
+      padding: 5px 24px;
+      border:1px solid $primary-dark;
+      border-radius:3px;
+      white-space: nowrap;
     }
 
     &:hover{
       color: $primary-pink;
+      border-color:$primary-pink;
     }
 
     i {
       margin-right: 20px;
+
+      @include tablet{
+        display: none;
+      }
     }
   }
 
@@ -56,7 +63,6 @@
     border-left: 3px solid $primary-pink;
 
     @include tablet {
-      border-left: 0;
       border-color: $primary-pink!important;
     }
   }

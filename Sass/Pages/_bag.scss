@@ -1,0 +1,160 @@
+#bag-section {
+  background-color: $white-2;
+
+  .bag-product {
+      margin-bottom: 40px;
+    .bag-product-item {
+      background-color: $white;
+      padding: 16px;
+
+      .row{
+          align-items:center;
+      }
+
+      &:not(:last-child){
+          margin-bottom: 20px;
+      }
+
+      .bag-item-info {
+        align-items: center;
+      }
+      input {
+        width: 30px;
+        height: 30px;
+        margin-right: 24px;
+        cursor: pointer;
+      }
+      .box-product-img{
+          padding-left: 24px;
+      }
+      .product-price {
+        margin-bottom: 8px;
+      }
+      h3 {
+        margin-bottom: 16px;
+      }
+      .product-info-general {
+        display: flex;
+
+        > div {
+          display: flex;
+        }
+
+        .product-info-color,
+        .product-info-size {
+          @include flex(row, flex-start, center);
+          margin-bottom: 16px;
+          margin-right: 20px;
+
+          span {
+            color: $gray-3;
+            margin-right: 10px;
+          }
+          p{  
+            white-space: nowrap;
+          }
+        }
+
+      }
+
+      .bag-item-right {
+        @include flex(row, space-between, center);
+      }
+
+      .product-counter {
+        @include flex(row, flex-start, center);
+
+        @include device {
+          flex-direction: column-reverse;
+        }
+        @include tablet{
+            flex-direction: row;
+        }
+
+        .count-math {
+          @include flex(row, center, center);
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background-color: $gray-6;
+          font-size: 22px;
+          cursor: pointer;
+          user-select: none;
+        }
+        .count {
+          margin: 0 24px;
+          color: $primary-dark;
+
+          @include device{
+              margin: 10px 0;
+          }
+          @include tablet{
+              margin: 0 24px;
+          }
+        }
+      }
+
+      i.trash{
+          font-size: 20px;
+          cursor: pointer;
+      }
+    }
+  }
+
+  .bag-total{
+      padding: 24px;
+      background-color: $white;
+
+      .bag-total-info{
+          @include flex(column,center);
+          margin-bottom: 24px;
+          padding-bottom: 24px;
+          border-bottom: 1px solid $gray-2;
+
+          .bag-total-info-item{
+              @include flex(row,space-between,center);
+              margin-top: 24px;
+
+              p{
+                  color: $gray-1;
+              }
+
+              span{
+                  font-weight: 600;
+                  letter-spacing: 0.2px;
+              }
+          }
+        }
+          .bag-total-sum{
+              @include flex(row,space-between,center);
+              margin-bottom: 40px;
+
+              h6{
+                  color:$primary-pink;
+              }
+          }
+          input#promocode{
+              width: 100%;
+              box-sizing: border-box;
+              padding: 12px 0;
+              padding-left: 16px;
+              background-color: $gray-6;
+              margin-bottom: 40px;
+              border-radius:8px;
+          }
+          .sell-btn{
+              width: 100%;
+              padding: 15px 0;
+              background-color: $primary-dark;
+              color: #fff;
+              border-radius:8px;
+          }
+  }
+  .empty-bag{
+      text-align: center;
+      font-size: 30px;
+      color:$red;
+      display: none;
+  }
+}
+

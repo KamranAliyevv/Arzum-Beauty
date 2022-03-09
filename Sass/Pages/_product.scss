@@ -481,6 +481,7 @@
     right: 8px;
     @include flex(row, center, center);
     border-radius: 50%;
+    color: $primary-dark;
 
     &.active i {
       color: red;

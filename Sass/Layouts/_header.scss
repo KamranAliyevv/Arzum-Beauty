@@ -137,7 +137,8 @@
         padding: 10px;
         text-transform: uppercase;
         opacity: 0;
-        transform: 0.5s;
+        transition:ease 0.5s;
+        z-index: 10;
 
         li {
           margin-bottom: 10px;

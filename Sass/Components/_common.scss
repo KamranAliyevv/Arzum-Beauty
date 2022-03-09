@@ -40,7 +40,6 @@ h6 {
 .text-font1 {
   font-family: $font-Euclid-Circular-A;
   font-style: normal;
-  font-weight: 400;
   font-size: 14px;
   line-height: 18px;
 }
@@ -77,6 +76,9 @@ h6 {
 }
 .dis-none{
   display: none!important;
+}
+.dis-block{
+  display: block!important;
 }
 .opacity-1{
   opacity: 1!important;
